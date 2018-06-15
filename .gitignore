@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# custom
+MNIST_data/
+mnist_lenet_log/
