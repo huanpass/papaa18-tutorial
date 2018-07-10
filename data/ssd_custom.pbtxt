@@ -1,0 +1,290 @@
+name: "SSD"
+node {
+  name: "img_input"
+  op: "Input"
+  device: CPU
+  type: T_FLOAT
+  input_op_param {
+    shape {
+      dim: 20
+      dim: 256
+      dim: 256
+      dim: 3
+    }
+  }
+}
+
+node {
+  name: "conv1_1"
+  input: "img_input"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 16
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv1_2"
+  input: "conv1_1"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 32
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "pool1"
+  input: "conv1_2"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "conv2_1"
+  input: "pool1"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 32
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv2_2"
+  input: "conv2_1"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 32
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "pool2"
+  input: "conv2_2"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "conv3_1"
+  input: "pool2"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 48
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv3_2"
+  input: "conv3_1"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 48
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv3_3"
+  input: "conv3_2"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 48
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "pool3"
+  input: "conv3_3"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "conv4_1"
+  input: "pool3"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 64
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv4_2"
+  input: "conv4_1"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 64
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+
+node {
+  name: "conv4_3"
+  input: "conv4_2"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 96
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "conv6"
+  input: "conv4_3"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 128
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "pool4"
+  input: "conv6"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "block8/conv3x3"
+  input: "pool4"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 128
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "block8/pool"
+  input: "block8/conv3x3"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "block9/conv3x3"
+  input: "block8/pool"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 128
+    kernel_size: 3
+    pad: 1
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "block9/pool"
+  input: "block9/conv3x3"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
+node {
+  name: "block10/conv1x1"
+  input: "block9/pool"
+  op: "Conv2D"
+  device: CPU
+  type: T_FLOAT
+  conv2d_op_param {
+    depth: 128
+    kernel_size: 1
+    pad: 0
+    stride: 1
+    activation_fn: "Relu"
+  }
+}
+node {
+  name: "block10/pool"
+  input: "block10/conv1x1"
+  op: "MaxPool2D"
+  device: CPU
+  type: T_FLOAT
+  max_pool2d_op_param {
+    kernel_size: 2
+    stride: 2
+  }
+}
