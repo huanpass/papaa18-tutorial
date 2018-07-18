@@ -8,13 +8,13 @@ The structure of the tutorial is:
 
 _First session_
 
--   Tutorial 1: TensorFlow basics
--   Tutorial 2: Data-Flow Graph IR and TensorFlow model parser
+-   [Tutorial 1](<notebooks/01\ Introduction\ to\ CNN\ and\ TensorFlow.ipynb>): TensorFlow basics
+-   [Tutorial 2](<notebooks/02\ Build\ CNN\ in\ DFG\ IR.ipynb>): Data-Flow Graph IR and TensorFlow model parser
 
 _Second Session_
 
--   Tutorial 3: CNN quantisation effect and exploration
--   Tutorial 4: Hardware design generation and deployment
+-   [Tutorial 3](<notebooks/03\ Fixed-Point\ Quantisation\ of\ CNN.ipynb>): CNN quantisation effect and exploration
+-   [Tutorial 4](<notebooks/04\ Deploy\ DFG\ IR\ on\ FPGA.ipynb>): Hardware design generation and deployment
 
 ```bash
 .
@@ -28,6 +28,8 @@ _Second Session_
 ```
 
 ## Installation
+
+In case you are not familiar with python, check out this link which is doing a very good job at explaining the basics: [Link](https://learnxinyminutes.com/docs/python/).
 
 For this tutorial python3 is a must if you don't have it on your distribution please follow these links: [Linux](https://docs.python-guide.org/starting/install3/linux/), [Mac OSX](https://docs.python-guide.org/starting/install3/osx/) and [Windows](https://docs.python-guide.org/starting/install3/win/).
 
