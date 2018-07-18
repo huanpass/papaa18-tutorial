@@ -2,6 +2,29 @@
 
 These are the series of tutorials prepared by Professor Wayne Luk from Imperial College London to introduce the principles and usage of the Convolutional Neural Network (CNN) to Field Programmable Gate Arrays flow first introduced by Corerain Technologies Ltd..
 
+## Structure
+
+The structure of the tutorial is:
+
+_First session_
+
+-   Tutorial 1: TensorFlow basics
+-   Tutorial 2: Data-Flow Graph IR and TensorFlow model parser
+
+_Second Session_
+
+-   Tutorial 3: CNN quantisation effect and exploration
+-   Tutorial 4: Hardware design generation and deployment
+
+```bash
+.
+├── data
+│   ├── figs
+│   └── mnist_model
+└── notebooks  # Here are the tutorials
+    └── Answer # Here are the answers, please look after attempting ;)
+```
+
 ## Installation
 
 For this tutorial python3 is a must if you don't have it on your distribution please follow these links: [Linux](https://docs.python-guide.org/starting/install3/linux/), [Mac OSX](https://docs.python-guide.org/starting/install3/osx/) and [Windows](https://docs.python-guide.org/starting/install3/win/).
@@ -17,7 +40,7 @@ virtualenv -p python3 venv
 source venv/bin/activate
 
 # Install plumber
-pip install -e $PLUMBER_DIR
+pip3 install -e $PLUMBER_DIR
 ```
 
 You might also need to install jupyter notebooks to run our tutorials and little exercises:
