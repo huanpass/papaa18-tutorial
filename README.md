@@ -23,6 +23,8 @@ _Second Session_
 │   └── mnist_model
 └── notebooks  # Here are the tutorials
     └── Answer # Here are the answers, please look after attempting ;)
+├── model      # Here should be the checkpoint and model files
+   └── ssd_ckpt
 ```
 
 ## Installation
