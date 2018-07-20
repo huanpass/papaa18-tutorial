@@ -8,13 +8,13 @@ The structure of the tutorial is:
 
 _First session_
 
--   [Tutorial 1](<notebooks/01\ Introduction\ to\ CNN\ and\ TensorFlow.ipynb>): TensorFlow basics
--   [Tutorial 2](<notebooks/02\ Build\ CNN\ in\ DFG\ IR.ipynb>): Data-Flow Graph IR and TensorFlow model parser
+-   [Tutorial 1](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/01%20Introduction%20to%20CNN%20and%20TensorFlow.ipynb): TensorFlow basics
+-   [Tutorial 2](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/02%20Build%20CNN%20in%20DFG%20IR.ipynb): Data-Flow Graph IR and TensorFlow model parser
 
 _Second Session_
 
--   [Tutorial 3](<notebooks/03\ Fixed-Point\ Quantisation\ of\ CNN.ipynb>): CNN quantisation effect and exploration
--   [Tutorial 4](<notebooks/04\ Deploy\ DFG\ IR\ on\ FPGA.ipynb>): Hardware design generation and deployment
+-   [Tutorial 3](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/03%20Fixed-Point%20Quantisation%20of%20CNN.ipynb): CNN quantisation effect and exploration
+-   [Tutorial 4](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/04%20Deploy%20DFG%20IR%20on%20FPGA.ipynb): Hardware design generation and deployment
 
 ```bash
 .
@@ -29,33 +29,57 @@ _Second Session_
 
 ## Installation
 
+### Step #1: VirtualBox
+
+We will need to install a Virtual Machine, in case you are not familiar here is the process:
+
+#### Step #1.1: Download VirtualBox
+
+Please navigate to this address and choose your distribution: <https://www.virtualbox.org/>.
+
+#### Step #1.2: Install VirtualBox
+
+Depending on your distribution please install VirtualBox.
+
+### Step #2: Creating a VirtualMachine
+
+#### Step #2.1: Download the installation disc
+
+Please downlaod the image file `papaa-tutorial.ova`. This image has all dependencies preinstalled and is ready to use. Download it at: ...
+
+#### Step #2.2: Creating and booting your VirtualMachine
+
+Inside VirtualBox click on File -> Import Appliance and find the downloaded image and add it to the menu and then click Continue. All the settings that you are going to see in the next screen are pre-made you just have to click Import. That should then take approximately 5-10 minutes or less depending on your machine.
+
+##### Step #2.2.1: Power it up
+
+Double click the imported machine to power it on and there we go!
+
 In case you are not familiar with python, check out this link which is doing a very good job at explaining the basics: [Link](https://learnxinyminutes.com/docs/python/).
 
-For this tutorial python3 is a must if you don't have it on your distribution please follow these links: [Linux](https://docs.python-guide.org/starting/install3/linux/), [Mac OSX](https://docs.python-guide.org/starting/install3/osx/) and [Windows](https://docs.python-guide.org/starting/install3/win/).
-
-If you have access to our `plumber` repository, you may install and run the notebook on your own laptop.
+### Step #3: Launching Jupter Notebook
 
 ```shell
-git clone https://github.com/corerain/papaa18-tutorial $PAPAA18_TUTORIAL_DIR
+# To get to the tutorial folder
+cd /home/jack/papaa18-tutorial/
 
-git clone --recursive https://github.com/corerain/plumber $PLUMBER_DIR
-cd $PAPAA18_TUTORIAL_DIR
-virtualenv -p python3 venv
+# Activate the virtual environment
 source venv/bin/activate
 
-# Install plumber
-pip3 install -e $PLUMBER_DIR
+# To launch the jupyter notebook
+jupyter notebook
+
+# You should see an URL appear in the terminal if your browser automatically
+# does not turn on copy that URL to your browser of choice
 ```
 
-You might also need to install jupyter notebooks to run our tutorials and little exercises:
+If you would like to install jupyter notebooks to run on your personal devices simply do:
 
 ```shell
 # Assuming that you have pip installed
 pip3 install --upgrade pip
 pip3 install jupyter
 ```
-
-The whole process of installation (in case you are having problems) is [here](https://jupyter.readthedocs.io/en/latest/install.html).
 
 ## Contact
 
