@@ -1,10 +1,10 @@
 # PAPAA'18 Tutorials
 
-These are the series of tutorials prepared by Professor Wayne Luk from Imperial College London to introduce the principles and usage of the Convolutional Neural Network (CNN) to Field Programmable Gate Arrays flow first introduced by Corerain Technologies Ltd..
+These are the tutorials prepared by Professor Wayne Luk from Imperial College London to introduce the principles and usage of the Convolutional Neural Network (CNN) on Field Programmable Gate Arrays.
 
 ## Structure
 
-The structure of the tutorial is:
+The structure of the tutorials is:
 
 _First session_
 
@@ -27,7 +27,7 @@ _Second Session_
    └── ssd_ckpt
 ```
 
-## Installation
+## Installation & Requirements
 
 ### Step #1: VirtualBox
 
@@ -45,22 +45,22 @@ Depending on your distribution please install VirtualBox.
 
 #### Step #2.1: Download the installation disc
 
-Please downlaod the image file `papaa-tutorial.ova`. This image has all dependencies preinstalled and is ready to use. Download it at: ...
+Please downlaod the image file `papaa-tutorial.ova`. This image has all dependencies preinstalled and is ready to use. Download it at: <https://s3-ap-southeast-1.amazonaws.com/corerain/PAPAA-tutorialWL.ova>.
 
-#### Step #2.2: Creating and booting your VirtualMachine
+#### Step #2.2: Creating and booting up your VirtualMachine
 
-Inside VirtualBox click on File -> Import Appliance and find the downloaded image and add it to the menu and then click Continue. All the settings that you are going to see in the next screen are pre-made you just have to click Import. That should then take approximately 5-10 minutes or less depending on your machine.
+Inside VirtualBox click on File -> Import Appliance and find the downloaded image on your disk and add it to the menu and then click Continue. All the settings that you are going to see in the next screen are pre-made, you just have to click Import. That should then take approximately 5-10 minutes or less depending on your machine.
 
 ##### Step #2.2.1: Power it up
 
 Double click the imported machine to power it on and there we go!
 
-In case you are not familiar with python, check out this link which is doing a very good job at explaining the basics: [Link](https://learnxinyminutes.com/docs/python/).
+We will be mostly using python in our demonstration. In case you are not familiar with python, check out this link which is doing a very good job at explaining the basics: [Link](https://learnxinyminutes.com/docs/python/).
 
-### Step #3: Launching Jupter Notebook
+### Step #3: Launching the Tutorials
 
 ```shell
-# To get to the tutorial folder
+# To get to the tutorial folder, or follow the alias link on your desktop
 cd /home/jack/papaa18-tutorial/
 
 # Activate the virtual environment
