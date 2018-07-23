@@ -45,7 +45,7 @@ Depending on your distribution please install VirtualBox.
 
 #### Step #2.1: Download the installation disc
 
-Please downlaod the image file `papaa-tutorial.ova`. This image has all dependencies preinstalled and is ready to use. Download it at: <https://s3-ap-southeast-1.amazonaws.com/corerain/PAPAA-tutorialWL.ova>. Or use BaiDuYun <https://pan.baidu.com/s/1A2barVEPNhvtUW1eR6gnjA>.
+Please downlaod the image file `papaa-tutorial.ova`. This image has all dependencies preinstalled and is ready to use. Download it at: <http://bit.ly/imperial_vm>. Or use BaiDuYun <https://pan.baidu.com/s/1A2barVEPNhvtUW1eR6gnjA>.
 
 #### Step #2.2: Creating and booting up your VirtualMachine
 
