@@ -13,7 +13,7 @@ _Session A_
 
 _Session B_
 
--   [Tutorial 3](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/03%20Fixed-Point%20Quantisation%20of%20CNN.ipynb): CNN quantisation effect and exploration
+-   [Tutorial 3](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/03%20Fixed-Point%20Representation%20of%20CNN.ipynb): CNN quantisation effect and exploration
 -   [Tutorial 4](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/04%20Deploy%20DFG%20IR%20on%20FPGA.ipynb): Hardware design generation and deployment
 
 ```bash
