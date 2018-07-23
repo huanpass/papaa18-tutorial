@@ -6,12 +6,12 @@ These are the tutorials prepared by Professor Wayne Luk from Imperial College Lo
 
 The structure of the tutorials is:
 
-_First session_
+_Session A_
 
 -   [Tutorial 1](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/01%20Introduction%20to%20CNN%20and%20TensorFlow.ipynb): TensorFlow basics
 -   [Tutorial 2](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/02%20Build%20CNN%20in%20DFG%20IR.ipynb): Data-Flow Graph IR and TensorFlow model parser
 
-_Second Session_
+_Session B_
 
 -   [Tutorial 3](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/03%20Fixed-Point%20Quantisation%20of%20CNN.ipynb): CNN quantisation effect and exploration
 -   [Tutorial 4](https://github.com/corerain/papaa18-tutorial/blob/master/notebooks/04%20Deploy%20DFG%20IR%20on%20FPGA.ipynb): Hardware design generation and deployment
