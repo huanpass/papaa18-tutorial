@@ -85,7 +85,7 @@ pip3 install jupyter
 
 If you would like to discover more please do not hesitate to contact us at:
 
--   Professor Wayne Luk (w.luk@ic.ac.uk)
+-   Professor Wayne Luk (w.luk@imperial.ac.uk)
 
 -   Martin Ferianc (martin.ferianc@corerain.com)
 
